@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Coiny", cursive;
+}
+
+.form-group {
+  @apply flex mx-4 justify-start items-center flex-wrap;
+}
+.input-group {
+  @apply flex flex-col mb-4 w-1/2 px-4;
+}
+.input-group.full {
+  @apply w-full;
+}
+.input-group label {
+  @apply font-semibold font-sans mb-1 text-lg;
+}
+.input-group input {
+  @apply font-sans;
+}
+.btn-default {
+  @apply w-full h-12 rounded font-bold text-xl outline-none bg-secondary text-primary transition hover:bg-primary hover:text-black;
+}
+
+table {
+  @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
+}
+table thead {
+  @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+}
+table tbody tr {
+  @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
+}
+table th,
+table td {
+  @apply py-4 px-6 text-center;
+}
+
+.card-chip {
+  @apply bg-white text-xl text-primary rounded-lg py-2 px-7 -mb-5 z-10 border border-black uppercase absolute -top-6 lg:left-9;
+}
+.card {
+  @apply flex flex-col lg:flex-row items-center bg-primary rounded mx-12 lg:w-2/3 border border-black relative mt-16 py-4 lg:py-0;
+}
+.card > div:not(.card-chip) {
+  @apply py-4 lg:py-10 px-4;
+}
+
+.checklist li {
+  @apply bg-white flex w-full items-center px-4 py-1 rounded mb-4 font-bold;
+  font-family: "Montserrat", sans-serif;
+}
+.checklist li svg {
+  @apply mr-6 text-green-600 pointer-events-none;
+}
+.checklist li p {
+  @apply text-center text-primary w-full text-sm;
+}
+
+.fc .fc-button {
+  @apply bg-white text-xl text-primary rounded-lg py-2 px-7 border border-black uppercase hover:bg-primary;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  @apply bg-primary;
+}
+.fc-col-header-cell {
+  color: #6b7280;
+}
+.fc-event-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.book-image {
+  @apply mx-auto;
+  max-height: 300px;
+}
